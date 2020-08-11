@@ -3,8 +3,10 @@ version: '2'
 
 services:
 
+    # "drupal" here is the service name, which is also used as the DNS name.
   drupal:
     image: custom-drupal:8.8.2
+    # this "." dot at build indicates that the dockerfile exists in the same directory as this compose file
     build: .
     ports:
       - "8080:80"
