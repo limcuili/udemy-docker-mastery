@@ -10,7 +10,7 @@ Here is a basic diagram of how the 5 services will work:
 
 Preface:
 You should have 3 manager nodes in your network. To do this, I spun up 3 nodes instances on play-with-docker.com and ran the following:
-In Node 1: `docker swarm init --advertise-addr \<IP Address\>`
+In Node 1: `docker swarm init --advertise-addr <IP Address>`
 In Node 2: `docker swarm join` command from the output of initializing swarm on Node 1.
 In Node 3: `docker swarm join` command from the output of initializing swarm on Node 1.
 
@@ -85,4 +85,6 @@ CLI Commands:
 docker service create --name result --network backend -p 5001:80 bretfisher/examplevotingapp_result
 ```
 
-
+Seeing the results:
+After running all the CLI commands, you are able to go to your browser and see the voting app by going to the IP Address of any of the three nodes.
+And since I chose port 5001, I am able to go to \<IP Address\>:5001 to see the result app.
